@@ -1,0 +1,8 @@
+Cloning project from github to the eclipse
+File -> import -> Expand Git -> select projects from Git -> clone URI
+-> Next -> paste the url of project in URI field eg: https://github.com/automationtrainingcenter/geetha_java.git 
+->click next -> in Branch Selection click next -> 
+in Local Destination click on Browse and navigate to 
+the workspace folder -> click next -> 
+click next in Select a wizard to use for importing projects -> 
+in Import Projects click on Finish

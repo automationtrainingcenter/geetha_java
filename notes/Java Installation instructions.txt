@@ -1,0 +1,102 @@
+Java Installation:
+
+1. download JDK 8 either 64 bit or 32 bit based on your system architecture from
+Oracle site (google for jdk8 download)
+
+2. Once downloaded double click on dowloaded file
+
+3. simply click next button for several time until you see
+java installation successfull message
+Note: make sure you install both JDK and JRE
+
+Create Environment Variables for Java
+
+Create JAVA_HOME environment variable
+1. right click on This PC \ My Computer -> properties
+2. click on Advanced System Settings
+3. click on Environment Variables
+4. In system variables section click on new
+5. enter variable name as JAVA_HOME
+and variable value as installation location JDK
+eg: C:\Program Files\Java\jdk1.8.0_201
+
+Edit Path environment variable
+1. right click on This PC \ My Computer -> properties
+2. click on Advanced System Settings
+3. click on Environment Variables
+4. select Path variable in System variables section and click on edit
+5. In windows 10 click on new and add the bin folder path of JDK installation location
+eg: C:\Program Files\Java\jdk1.8.0_201\bin
+In Windows 7 append variable value with bin folder path of JDK installation location
+eg: existing Path variable value....;C:\Program Files\Java\jdk1.8.0_201\bin;
+click on OK multiple time to close all the opened windows
+
+
+Verify JDK installation
+open command prompt (win + R and type cmd and click ok)
+then type following command
+javac -version
+and click enter so that you can see
+javac 1.8.0_201 (here 201 may vary)
+
+Verify JRE installation
+open command prompt (win + R and type cmd and click ok)
+then type following command
+java -version
+and click enter so that you can see
+java version "1.8.0_201"
+Java(TM) SE Runtime Environment (build 1.8.0_201-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
+
+(here also 201 may vary based on java version you installed)
+
+
+ECLIPSE
+
+Downlaod eclipse photon r pakages from https://www.eclipse.org/downloads/packages/release/photon/r
+and select Eclispe IDR For Java Developers
+either 64 bit or 32 bit based on System architecture
+it will download a zip file
+extract that zip file into any drive, once extracted right click on eclipse application with eclipse logo and 
+click send to -> Desktop to create a shortcut on desktop
+double click on that shortcut on desktop to open eclipse IDE
+Every time we open Eclipse IDE it will ask for workspace(folder) so select a workspace (if you already have else create one)
+where you want to create your projects then click on OK
+it wil launch eclipse IDE
+which contains Package Explorer where we will create projects and all the files in projects
+console is a basic input and output window
+(if console is not visible click on window menu option -> show view -> console)
+problems window will display errors related to project configuration
+we don't require task list or outline windows so we can close them
+
+
+GIT installation instructions
+
+1. Downlaod git from the following url
+https://git-scm.com/downloads
+
+2. double click on downloaded file click next multiple times until you reach 
+choosing the default editor used by Git
+screen
+
+3. In the above screen select visual studio code as Git's default editor click next until it completes installation
+
+
+Edit Path environment variable to add GIT installation cmd folder path
+1. right click on This PC \ My Computer -> properties
+2. click on Advanced System Settings
+3. click on Environment Variables
+4. select Path variable in System variables section and click on edit
+5. In windows 10 click on new and add the cmd folder path of Git installation location
+eg: C:\Program Files\Git\cmd
+In Windows 7 append variable value with cmd folder path of Git installation location
+eg: existing Path variable value....;C:\Program Files\Git\cmd;
+click on OK multiple time to close all the opened windows
+
+Verify Git installation
+Open command prompt (Win + R and type cmd and click ok)
+then type following command
+git --version
+and click enter so that you can see
+git version 2.21.0.windows.1
+(here 21 number may vary)
