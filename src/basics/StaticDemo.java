@@ -17,6 +17,8 @@ public class StaticDemo {
 		obj2.increment();// i = 1 j = 2
 		StaticDemo obj3 = new StaticDemo();
 		obj3.increment();// i = 1 j = 3
+		obj1.increment();
+		obj1.increment();
 	}
 
 }
