@@ -119,10 +119,56 @@ public class DatatypesDemo {
 		
 		//down casting : narrowing - higher data type to lower data type
 		//lower_data_type_var_name = (lower_data_type) higher_data_type_var_name
-		short shHigh = 121;
+		short shHigh = 129;
 		byte byLow;
 		byLow = (byte) shHigh;
 		System.out.println("short to byte and byte value is "+byLow);
+		
+		long lHigh = 1234567899l;
+		int intLow;
+		intLow = (int) lHigh;
+		System.out.println("long to int and int value is "+intLow);
+		
+		float fltHigh = 1234.99f;
+		int i2fLow;
+		i2fLow = (int) fltHigh;
+		System.out.println("int to float and int value is "+i2fLow);
+		
+		// primitive to wrapper 
+		int ip = 20;
+		Integer iw = Integer.valueOf(ip);
+		System.out.println(iw);
+		
+		//wrapper to primitive
+		Double dw = new Double(3.14);
+		double dp = dw.doubleValue();
+		System.out.println(dp);
+		
+		// primitive to reference
+		//long to string
+		long lp = 123456l;
+		String l2s = Long.toString(lp);
+		System.out.println(l2s+10);
+		
+		//int to string
+		String i2s = Integer.toString(ip);
+		System.out.println(i2s+10);
+		
+		//reference to primitive
+		String s1 = "1234";
+		int s2i = Integer.parseInt(s1);
+		System.out.println(s2i);
+		
+		
+		String s2 = "3.14";
+		float s2f = Float.parseFloat(s2);
+		System.out.println(s2f);
+		
+//		int i2 = Integer.parseInt(s2);
+//		System.out.println(i2);
+		
+		
+		
 	}
 
 }
