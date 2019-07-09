@@ -76,6 +76,42 @@ public interface ArraysDemo {
 		System.out.println(vowels[4]);
 		
 		//Two dimensional arrays
+		// declaration
+		int[][] matrix1 = new int[2][2];
+		
+		
+		// assignment
+//		first row data
+		matrix1[0][0] = 1; // first column
+		matrix1[0][1] = 2; // second column
+		// second row data
+		matrix1[1][0] = 3; // first column
+		matrix1[1][1] = 4; // second column
+		
+		//retrieve the data
+		System.out.print(matrix1[0][0]+"\t");
+		System.out.print(matrix1[0][1]+"\n");
+		System.out.print(matrix1[1][0]+"\t");
+		System.out.print(matrix1[1][1]+"\n");
+		
+		// initialization
+		int[][] matrix2 = {{9,8,7}, {6,5,4}, {3,2,1}};
+		// first row
+		System.out.print(matrix2[0][0]+"\t"); //first column
+		System.out.print(matrix2[0][1]+"\t"); // second column
+		System.out.print(matrix2[0][2]+"\n"); // third column
+		
+		// second row
+		System.out.print(matrix2[1][0]+"\t"); //first column
+		System.out.print(matrix2[1][1]+"\t"); // second column
+		System.out.print(matrix2[1][2]+"\n"); // third column
+		
+		// third row
+		System.out.print(matrix2[2][0]+"\t"); //first column
+		System.out.print(matrix2[2][1]+"\t"); // second column
+		System.out.print(matrix2[2][2]+"\n"); // third column
+		
+		
 	}
 
 }
