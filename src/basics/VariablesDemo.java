@@ -68,6 +68,7 @@ public class VariablesDemo {
 		System.out.println("local variable l = "+l);
 		//accessing instance variable
 		// create an object of the class
+		// classname obj_name = new classname();
 		VariablesDemo obj = new VariablesDemo();
 		System.out.println("i = "+obj.i);
 		
