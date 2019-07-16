@@ -64,28 +64,26 @@ public interface ArraysDemo {
 //		System.out.println(numbers[3]);
 //		System.out.println(numbers[4]);
 //		System.out.println(numbers[5]);
-		//Retrieve data using for loop
+		// Retrieve data using for loop
 //		for (int i = 0; i < numbers.length; i++) {
 //			System.out.println(numbers[i]);
 //		}
-		
-		//retrieve data using for each loop
-		for(int number : numbers) {
+
+		// retrieve data using for each loop
+		for (int number : numbers) {
 			System.out.println(number);
 		}
-		
-		
+
 		// initialzation
 		char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
-
 
 //		System.out.println(vowels[0]);
 //		System.out.println(vowels[1]);
 //		System.out.println(vowels[2]);
 //		System.out.println(vowels[3]);
 //		System.out.println(vowels[4]);
-		
-		for(char vowel : vowels) {
+
+		for (char vowel : vowels) {
 			System.out.println(vowel);
 		}
 
@@ -102,27 +100,42 @@ public interface ArraysDemo {
 		matrix1[1][1] = 4; // second column
 
 		// retrieve the data
-		System.out.print(matrix1[0][0] + "\t");
-		System.out.print(matrix1[0][1] + "\n");
-		System.out.print(matrix1[1][0] + "\t");
-		System.out.print(matrix1[1][1] + "\n");
+//		System.out.print(matrix1[0][0] + "\t");
+//		System.out.print(matrix1[0][1] + "\n");
+//		System.out.print(matrix1[1][0] + "\t");
+//		System.out.print(matrix1[1][1] + "\n");
+
+		for (int i = 0; i < 2; i++) {
+			for (int j = 0; j < 2; j++) {
+				System.out.print(matrix1[i][j]+"\t");
+			}
+			System.out.println();
+		}
 
 		// initialization
-		int[][] matrix2 = { { 9, 8, 7 }, { 6, 5, 4 }, { 3, 2, 1 } };
+		int[][] matrix2 = { { 9, 8, 7, 11 }, { 6, 5, 4, 12 }, { 3, 2, 1} };
 		// first row
-		System.out.print(matrix2[0][0] + "\t"); // first column
-		System.out.print(matrix2[0][1] + "\t"); // second column
-		System.out.print(matrix2[0][2] + "\n"); // third column
-
-		// second row
-		System.out.print(matrix2[1][0] + "\t"); // first column
-		System.out.print(matrix2[1][1] + "\t"); // second column
-		System.out.print(matrix2[1][2] + "\n"); // third column
-
-		// third row
-		System.out.print(matrix2[2][0] + "\t"); // first column
-		System.out.print(matrix2[2][1] + "\t"); // second column
-		System.out.print(matrix2[2][2] + "\n"); // third column
+//		System.out.print(matrix2[0][0] + "\t"); // first column
+//		System.out.print(matrix2[0][1] + "\t"); // second column
+//		System.out.print(matrix2[0][2] + "\n"); // third column
+//
+//		// second row
+//		System.out.print(matrix2[1][0] + "\t"); // first column
+//		System.out.print(matrix2[1][1] + "\t"); // second column
+//		System.out.print(matrix2[1][2] + "\n"); // third column
+//
+//		// third row
+//		System.out.print(matrix2[2][0] + "\t"); // first column
+//		System.out.print(matrix2[2][1] + "\t"); // second column
+//		System.out.print(matrix2[2][2] + "\n"); // third column
+		System.out.println("number of rows "+matrix2.length);
+		System.out.println("number of columns in first row "+matrix2[0].length);
+		for(int i = 0; i<matrix2.length; i++) {
+			for(int j=0; j<matrix2[i].length; j++) {
+				System.out.print(matrix2[i][j]+"\t");
+			}
+			System.out.println();
+		}
 
 	}
 

@@ -78,17 +78,85 @@ public class LoopsDemo {
 		// read strings from the console until length of the entered string is less than
 		// 7
 		Scanner sc = new Scanner(System.in);
-		String str;
-		do {
-			System.out.println("enter some string");
-			str = sc.next();
-		} while (str.length() < 7);
+//		String str;
+//		do {
+//			System.out.println("enter some string");
+//			str = sc.next();
+//		} while (str.length() < 7);
 
 		// for loop to print multiples of 3 from 1 to 10
 		for (int k = 1; k < 11; k++) {
-			System.out.println(k*3);
+			System.out.println(k * 3);
 		}
-		
-		
+
+		// break statement
+		for (int k = 0; k < 10; k++) {
+			if (k == 5) {
+//				break;
+				continue;
+			}
+			System.out.println(k);
+		}
+
+		// gmail scenario
+//		String username = "";
+//		boolean isValidPassword = false;
+//		do {
+//			System.out.println("enter username");
+//			username = sc.next();
+//			if (username.equalsIgnoreCase("surya")) {
+//				for (int k = 0; k < 3; k++) {
+//					System.out.println("enter password");
+//					String password = sc.next();
+//					if (password.equals("sunshine")) {
+//						System.out.println("welcome surya");
+//						isValidPassword = true;
+//						break; // for loop
+//					} else {
+//						System.out.println("invalid password");
+//					}
+//				}
+//				if (isValidPassword) {
+//					break; // while loop
+//				} else {
+//					System.out.println("account blocked");
+//					break; // while loop
+//				}
+//			} else {
+//				System.out.println("invalid username");
+//			}
+//		} while (true);
+
+		// string reverse
+		String str = "python is fun to learn!";
+		String rstr = "";
+		for (int k = str.length(); k > 0; k--) {
+			rstr += str.charAt(k - 1);
+		}
+		System.out.println(rstr);
+
+		// x= {1,2,3,4,5} and y = {2,3,4} then result array = {1, 5}
+		int[] x = { 1, 2, 3, 4, 5, 8, 10,11 };
+		int[] y = { 2, 3, 4, 8 };
+		int[] r = new int[x.length - y.length];
+		int l = 0;
+
+		for (int m = 0; m < x.length; m++) {
+			boolean isMatchFound = false;
+			for (int n = 0; n < y.length; n++) {
+				if (x[m] == y[n]) {
+					isMatchFound = true;
+					break;
+				}
+			}
+			if (!isMatchFound) {
+				r[l] = x[m];
+				l++;
+			}
+		}
+		for (int k = 0; k < r.length; k++) {
+			System.out.println(r[k]);
+		}
+
 	}
 }
