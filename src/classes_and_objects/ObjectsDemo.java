@@ -1,4 +1,7 @@
 package classes_and_objects;
+
+import java.util.Objects;
+
 /*
  * Class is a blueprint or template to create an object
  * it is logical entity which does not exist physically.
@@ -40,8 +43,47 @@ public class ObjectsDemo {
 	String category;
 	
 	//store the data in instance variables
-	public void addProduct() {
-		
+	public void addProduct(int i, String n, double p, String c) {
+		id = i;
+		name = n;
+		price = p;
+		category = c;
 	}
+	
+	
+	//display product details
+	public void displayProdutct() {
+		System.out.println("id = "+id+"\nname = "+name+"\nprice = "+price+"\ncategory = "+category);
+	}
+	
+	//apply discount
+	public double applyDiscount(int discInPercentage) {
+		double discount = price * discInPercentage * 0.01;
+		System.out.println("total discount is "+discount);
+		price -= discount;
+		return price;
+	}
+	
+	public static void main(String[] args) {
+		ObjectsDemo obj1 = new ObjectsDemo();
+		obj1.addProduct(101, "Mac book air", 75000.00, "laptops");
+		
+		ObjectsDemo obj2 = new ObjectsDemo();
+		obj2.addProduct(102, "LG G8", 45000.00, "smartphones");
+		
+		ObjectsDemo obj3 = new ObjectsDemo();
+		obj3.addProduct(103, "Canon 1500D", 28000.00, "DSLR");
+		
+		obj1.displayProdutct();
+		obj2.displayProdutct();
+		obj3.displayProdutct();
+		
+		double priceAfterDiscount = obj2.applyDiscount(20);
+		
+		System.out.println(priceAfterDiscount);
+	}
+	
+	
+	
 
 }
