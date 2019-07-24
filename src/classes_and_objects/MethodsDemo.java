@@ -64,6 +64,10 @@ public class MethodsDemo {
 	
 	
 	public static void main(String[] args) {
+//		System.out.println(args.length);
+//		for(String arg : args) {
+//			System.out.println(arg);
+//		}
 		//create an object of this class
 		MethodsDemo obj = new MethodsDemo();
 		obj.methodOne();
