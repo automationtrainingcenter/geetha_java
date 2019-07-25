@@ -35,6 +35,9 @@ public class PolymorphismDemo {
 		
 		RunTimePolyParent rpcObj = new RunTimePolyChild();
 		rpcObj.add(10, "50");
+		rpcObj.add(10,  "sunshine");
+		rpcObj.add(10, "20abc");
+		
 		
 	}
 
