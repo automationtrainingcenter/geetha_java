@@ -39,5 +39,24 @@ package abstraction;
  */
 
 public class AbstractionDemo {
-
+	public static void main(String[] args) {
+		AbstractClassDemo acObj = new AbstractClassImpl();
+		acObj.methodOne();
+		acObj.methodTwo();
+		acObj.methodThree();
+		
+		InterfaceDemo inObj = new InterfaceImpl();
+		inObj.methodOne();
+		inObj.methodTwo();
+		inObj.methodThree();
+		
+		//multi interface implemented by single class
+		InterfaceOne i1Obj = new MultiInterfaceImpl();
+		i1Obj.methodOne();
+//		((MultiInterfaceImpl)i1Obj).methodTwo();
+//		((InterfaceTwo)i1Obj).methodTwo();
+		
+		InterfaceTwo i2Obj = (InterfaceTwo)i1Obj;
+		i2Obj.methodTwo();
+	}
 }

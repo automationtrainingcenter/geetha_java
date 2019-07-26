@@ -1,0 +1,17 @@
+WebDriver --- interface
+	get(string url)
+
+TakeScreenshot -- interface
+	getScreenshotAs(OutputType arg)
+
+RemoteWebDriver implemetns WebDriver, TakeScreenshot
+
+ChromeDriver extends RemoteWebDriver
+FirefoxDriver extends RemoteWebDriver
+
+to launch chrome browser
+WebDriver driver = new ChromeDriver();
+driver.get("http://www.google.com");
+
+TakeScreenshot ts = (TakeScreenshot)driver;
+
