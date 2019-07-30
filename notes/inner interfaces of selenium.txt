@@ -1,0 +1,70 @@
+
+interface WebDriver{
+	
+
+	get(String url);
+
+	.
+	.
+	.
+	Navigation navigate();
+	Manage manage()
+	.
+	interface Navigation{
+		to(String url);
+		to(URL url)
+		forward();
+		back();
+		refresh();
+	}
+
+	interface Manage{
+		Window window();
+		Timeouts timeouts()
+		.
+	}
+
+	interface Window{
+		void maximize();
+		void fullScreen();
+		void getSize();
+		void getPosition();
+		.
+		.
+		.
+	}
+
+	interface Timeouts{
+		void implicitlyWait(TimeOut arg);
+
+	}
+}
+
+class RemoteWebDriver implments WebDriver, Navigation, Window, Manage{
+	................
+}
+
+class ChromeDriver extends RemoteWebDriver{
+
+..............
+..............
+}
+
+
+class TestBrowser{
+	main(){
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://www.google.com");
+		//Navigation nav = driver.navigate();
+		//nav.refresh();
+		driver.navigate().refresh();
+
+		//Manage ma = driver.manage();
+		//Window win = ma.window()
+		//win.maximize();
+		
+		driver.manage().window().maximize();
+
+		//Timeouts tout = ma.timeouts();
+		//tout.implicitlyWait();
+		driver.manage().timeouts().implicitlyWait();

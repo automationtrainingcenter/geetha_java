@@ -7,5 +7,5 @@ public interface InterfaceDemo {
 
 	void methodTwo();
 	
-	void methodThree();  
+	void methodThree(); 
 }
