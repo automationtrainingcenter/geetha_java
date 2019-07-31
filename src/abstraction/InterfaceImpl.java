@@ -17,6 +17,5 @@ public class InterfaceImpl implements InterfaceDemo{
 		System.out.println("method three implementation");
 	}
 	
-	
 
 }

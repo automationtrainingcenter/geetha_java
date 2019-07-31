@@ -26,6 +26,11 @@ import abstraction.Outer.Inner;
  * From Java 8 onwards interface allows concrete methods
  * These concrete methods are either static methods or "default" methods
  * We can access default method using interface reference and static method using interface name
+ * static methods are final methods in interface we can't override static methods in 
+ * implementation classes
+ * default methods are not final methods we can override these default methods in
+ * implementation classes only
+ * 
  * 
  * we can't create an instance of either abstract class or interface but we can create object reference,
  * 
@@ -52,6 +57,10 @@ public class AbstractionDemo {
 		inObj.methodOne();
 		inObj.methodTwo();
 		inObj.methodThree();
+		//accessing static method of the interface using interface name
+		InterfaceDemo.staticMethod();
+		//accessing default methods of the interface using object reference
+		inObj.defaultMethod();
 		
 		//multi interface implemented by single class
 		InterfaceOne i1Obj = new MultiInterfaceImpl();
@@ -75,6 +84,10 @@ public class AbstractionDemo {
 		iObj.imethod();
 		((Outer) iObj).methodOne();
 		
+		
+//		Functional interfaces
+		FuncInterface1 f1Obj = new FuncIntegerfaceImpl();
+		f1Obj.methodOne();
 		
 		
 	}
