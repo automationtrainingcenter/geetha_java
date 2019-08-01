@@ -85,10 +85,28 @@ public class AbstractionDemo {
 		((Outer) iObj).methodOne();
 		
 		
-//		Functional interfaces
-		FuncInterface1 f1Obj = new FuncIntegerfaceImpl();
+//		Functional interface implementation using normal Java class
+		FuncInterface1 f1Obj = new FuncInterfaceImpl();
 		f1Obj.methodOne();
 		
+		
+//		Functional interface implementation using Anonymous class
+		FuncInterface1 fAnon = new FuncInterface1() {
+			
+			@Override
+			public void methodOne() {
+				System.out.println("functional interface implementaion in anonymous class");
+			}
+		};
+		
+		fAnon.methodOne();
+		
+//		Functional interface implementation using lambda expressions
+		FuncInterface1 flam = () -> System.out.println("functional interface implementation using lambda expression");
+		flam.methodOne();
+		
+		FuncInterface1 flam1 = () -> System.out.println("methodone implementation using lambda expression");
+		flam1.methodOne();
 		
 	}
 }

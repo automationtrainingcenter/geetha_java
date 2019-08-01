@@ -1,0 +1,35 @@
+void methodOne(){
+	sysout("method one");
+}
+
+() -> sysout("method one");
+
+void add(int a, int b){
+	sysout("a+b = "+(a+b));
+}
+
+(int a, int b) -> sysout("a+b="+(a+b));
+
+int mul(int a, int b){
+	return a*b
+}
+
+(int a, int b) -> a*b;
+
+int div(int a, int b){
+	if(b == 0){
+	  sysout("divisin by zero is not possible")
+	  return 0
+	}else{
+	  return a / b;
+	}
+}
+
+(int a, int b) -> {
+	if(b == 0){
+	  sysout("divisin by zero is not possible")
+	  return 0
+	}else{
+	  return a / b;
+	}
+};

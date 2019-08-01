@@ -1,6 +1,6 @@
 package abstraction;
 
-public class FuncIntegerfaceImpl implements FuncInterface1{
+public class FuncInterfaceImpl implements FuncInterface1{
 
 	@Override
 	public void methodOne() {
