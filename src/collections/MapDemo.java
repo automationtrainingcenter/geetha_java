@@ -1,9 +1,11 @@
 package collections;
 
 import java.util.Collection;
-import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeMap;
 
 /*
  * Map is used to store the data in key and value pairs
@@ -18,8 +20,8 @@ import java.util.Set;
 public class MapDemo {
 	
 	public static void main(String[] args) {
-		//create  aMap
-		Map<String, Integer> courses = new HashMap<String, Integer>();
+		//create  a Map
+		Map<String, Integer> courses = new TreeMap<String, Integer>();
 		
 		// verify map is empty or not
 		System.out.println(courses.isEmpty());
@@ -51,14 +53,33 @@ public class MapDemo {
 			System.out.println(value);
 		}
 		
+		// retrieve data from the map using iterator interface
+		System.out.println("*********************************");
+		Iterator<String> keyIt = keys.iterator();
+		while(keyIt.hasNext()) {
+			System.out.println(keyIt.next());
+		}
+		
+		//retrieve data from the map as a key and value pairs
+		Set<Entry<String, Integer>> entrySet = courses.entrySet();
+		Iterator<Entry<String, Integer>> entryIt = entrySet.iterator();
+		while(entryIt.hasNext()) {
+			Entry<String, Integer> next = entryIt.next();
+			System.out.println(next.getKey()+"----"+next.getValue());
+		}
+		
+		for(Entry<String, Integer> kvPair : entrySet) {
+			System.out.println(kvPair.getKey()+"::::::::::::::"+kvPair.getValue());
+		}
+		
 		// update the data
 		courses.put("Java", 50);
 		System.out.println(courses);
 		
-		// verify a key is avilable or not
+		// verify a key is available or not
 		System.out.println(courses.containsKey("python"));
 		
-		// verify a value is availble or not
+		// verify a value is available or not
 		System.out.println(courses.containsValue(40));
 		
 		// remove the data
